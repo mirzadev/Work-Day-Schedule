@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link 
+      rel="stylesheet" 
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Styles/style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">WORK DAY SCHEDULE</h1>
+      <p class="lead">A SIMPLE CALENDAR APP FOR SCHEDULING DAILY ACTIVITIES</p>
+      <h4 class="date_prefix">Today's Date:</h4><p id="currentDay" class="lead"></p>
+      
+    </header>
+    <div class="container">
+      <!-- Timeblocks go here -->
+      <div class="row">
+        <div class="col-lg-12">
+            <div class = "row">
+                <div class="col-lg-2" id="heading-1">
+                    <h5 class="col-title">TIME</h5>
+                </div>
+                <div class = "col-lg-8" id="heading-2">
+                    <h5 class="col-title">WHAT YOU WILL DO TODAY !</h5>
+                </div>
+                <div class = "col-lg-2" id="heading-3">
+                    <h5 class="col-title">SAVE OPTION</h5>
+                </div>
+
+
+                <div class="col-lg-2">
+                    <h5>9 AM - 10 AM</h5>
+                </div>               
+                <div class = "col-lg-8" id="taskArea">
+                    <body onload = "get()">
+                    <p id="savedText"></p>
+                    <p id="openedText"></p>                   
+                    <textarea type="text" id="input"></textarea>                    
+                    </body>
+                </div>
+                <div class = "col-lg-2">
+                    <button onclick="save()"class="saveBtn" id="saveBtn_btn">Save</button>                  
+                </div>
+
+
+                <div class="col-lg-2">
+                  <h5>10 AM - 11 AM</h5>
+                </div> 
+                <div class = "col-lg-8" id="taskArea1">
+                  <body onload = "get1()">
+                  <p id="savedText1"></p>
+                  <p id="openedText1"></p>                   
+                  <textarea type="text" id="input1"></textarea>                    
+                  </body>
+                </div>
+                <div class = "col-lg-2">
+                  <button onclick="save1()"class="saveBtn" id="saveBtn_btn">Save</button>                  
+                </div>
+
+
+                <div class="col-lg-2">
+                  <h5>11 AM - 12 PM</h5>
+                </div>               
+                <div class = "col-lg-8" id="taskArea2">
+                  <body onload = "get2()">
+                  <p id="savedText2"></p>
+                  <p id="openedText2"></p>                   
+                  <textarea type="text" id="input2"></textarea>                     
+                  </body>
+                </div>
+                <div class = "col-lg-2">
+                  <button onclick="save2()"class="saveBtn" id="saveBtn_btn">Save</button>                  
+                </div>
+
+
+                <div class="col-lg-2">
+                  <h5>12 PM - 01 PM</h5>
+                </div> 
+                <div class = "col-lg-8" id="taskArea3">
+                  <body onload = "get3()">
+                  <p id="savedText3"></p>
+                  <p id="openedText3"></p>                   
+                  <textarea type="text" id="input3"></textarea>                     
+                  </body>
+                </div>
+                <div class = "col-lg-2">
+                  <button onclick="save3()"class="saveBtn" id="saveBtn_btn">Save</button>                  
+                </div>
+
+                <div class="col-lg-2">
+                  <h5>01 PM - 02 PM</h5>
+                </div>               
+                <div class = "col-lg-8" id="taskArea4">
+                  <body onload = "get4()">
+                  <p id="savedText4"></p>
+                  <p id="openedText4"></p>                   
+                  <textarea type="text" id="input4"></textarea>                    
+                  </body>
+                </div>
+                <div class = "col-lg-2">
+                  <button onclick="save4()"class="saveBtn" id="saveBtn_btn">Save</button>                  
+                </div>
+
+
+                <div class="col-lg-2">
+                  <h5>02 PM - 03 PM</h5>
+                </div> 
+                <div class = "col-lg-8" id="taskArea5">
+                  <body onload = "get5()">
+                  <p id="savedText5"></p>
+                  <p id="openedText5"></p>                   
+                  <textarea type="text" id="input5"></textarea>                    
+                  </body>
+                </div>
+                <div class = "col-lg-2">
+                  <button onclick="save5()"class="saveBtn" id="saveBtn_btn">Save</button>                  
+                </div>
+
+
+                <div class="col-lg-2">
+                  <h5>03 PM - 04 PM</h5>
+                </div>               
+                <div class = "col-lg-8" id="taskArea6">
+                  <body onload = "get6()">
+                  <p id="savedText6"></p>
+                  <p id="openedText6"></p>                   
+                  <textarea type="text" id="input6"></textarea>                     
+                  </body>
+                </div>
+                <div class = "col-lg-2">
+                  <button onclick="save6()"class="saveBtn" id="saveBtn_btn">Save</button>                  
+                </div>
+
+              
+                <div class="col-lg-2">
+                  <h5>04 PM - 05 PM</h5>
+                </div> 
+                <div class = "col-lg-8" id="taskArea7">
+                  <body onload = "get7()">
+                  <p id="savedText7"></p>
+                  <p id="openedText7"></p>                   
+                  <textarea type="text" id="input7"></textarea>                     
+                </body>
+                </div>
+                <div class = "col-lg-2">
+                  <button onclick="save7()"class="saveBtn" id="saveBtn_btn">Save</button>                  
+                </div>
+   
+    <br>
+    <br>
+    <div class="end_note">
+        <h5 class="foot_note">PREPARED BY: MIRZA ABDUL AWAL</h5>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
+   
+  </body>
+</html>
